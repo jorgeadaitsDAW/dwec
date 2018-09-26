@@ -1,0 +1,28 @@
+{
+  "name": "configuracion2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test":"mocha", 
+    "babel": "babel src -d out",
+    "comprimir": "yuicompressor ./out/*.js -o  \".js$:-min.js\"",
+    "estilo": "eslint ./src/*",
+    "build": "npm run estilo && npm run babel && npm run comprimir",
+    "watch": "watch 'npm run build' ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.2.0",
+    "eslint-config-google": "^0.9.1",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "uglify-js": "^3.4.5",
+    "watch": "^1.0.2",
+    "yuicompressor": "^2.4.8"
+  }
+}
