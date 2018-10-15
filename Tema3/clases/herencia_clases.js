@@ -1,6 +1,6 @@
 class PersonaGenerica{
         constructor(nombre, apellidos) {
-           this._nombre = nombre;
+           this.nombre = nombre;
            this.apellidos = apellidos;
         }
 
@@ -15,8 +15,22 @@ class PersonaGenerica{
 
         static esMayorDeEdad(edad){
             return edad > 18;
-        }    
+        }
+        
+        toString(){
+            return "NOMBRE: "+ this.nombre; 
+        }
 }
+console.log("EJEMPLO TO STRING");
+let personaX = new PersonaGenerica("Jorge","Prueba");
+console.log(personaX);
+console.log(personaX.toString);
+console.log(personaX.toString());
+console.log(""+personaX);
+console.log(""+personaX.toString);
+console.log(""+personaX.toString());
+
+
 
 class Alumno extends PersonaGenerica{
     constructor(nombre,apellidos,clase){
@@ -60,7 +74,7 @@ class Alumno2 extends PersonaGenerica{
     }
 
     get nombre(){
-        return this._nombre;  
+        return "A"+this._nombre;  
     }
 
     set nombre(nombre){

@@ -12,21 +12,31 @@ function ejemplosTiposObjetos(){
 function ejemplosTiposPredefinidosJavascript(){
 	//EJEMPLOS DE TIPOS PREDEFINIDOS JAVASCRIPT
 	console.log("EJEMPLOS DE TIPOS PREDEFINIDOS JAVASCRIPT");
+	ejemplosDate();
+	ejemplosExpresionesRegulares();
+	ejemplosError();
 }
 
 function ejemplosTiposDefinidosProgramador(){
 	//TIPOS DEFINIDOS POR EL PROGRAMADOR//
 	console.log("EJEMPLOS DE TIPOS DEFINIDOS POR EL PROGRAMADOR");
+	ejemplosFuncion();
+	ejemplosClase();
+
 }
 
 function ejemplosTiposArrays(){
 	//TIPOS ARRAYS
 	console.log("TIPOS ARRAYS")
+	ejemploArray();
+	ejemploTypedArray();
 }
 
 function ejemplosTiposEspeciales(){
 	//TIPOS OBJETOS ESPECIALES
 	console.log("TIPOS OBJETOS ESPECIALES")
+	ejemplosVariablesGlobales();
+	ejemplosPrototype();
 }
 
 

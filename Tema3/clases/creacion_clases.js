@@ -11,11 +11,16 @@ class Persona{
         this.nombre = nombre;
         this.apellidos = apellidos;
     }
+
+    //toString(){
+    //    return `SOY LA PERSONA CON DATOS: ${this.nombre} ${this.apellidos}`
+   //}
 }
 
 let persona2 = new Persona("Jorge","Baron");
 console.log("EJEMPLO DE PERSONA 2:");
 console.log(persona2);
+console.log(`PERSONA: ${persona2}`);
 console.log(`NOMBRE: ${persona2.nombre}`);
 console.log(`APELLIDOS: ${persona2.apellidos}`);
 
