@@ -1,0 +1,1 @@
+mostrarPeliculasHTML(peliculas);

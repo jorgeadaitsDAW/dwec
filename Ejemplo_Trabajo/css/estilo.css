@@ -1,0 +1,23 @@
+#peliculas{
+    width:100;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pelicula{
+    width:200px;
+    height:200px;
+    border:1px solid black;
+}
+
+.incorrecto{
+    background-color:red;
+}
+
+.correcto{
+    background-color:green;
+}
+
+.error{
+    color:red;
+}
