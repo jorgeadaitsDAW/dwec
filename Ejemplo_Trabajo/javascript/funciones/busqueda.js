@@ -4,7 +4,7 @@ function filtrarPorNombreyDirector(){
     let nombrePelicula = inputNombre.value;
     let director = inputDirector.value;
     let peliculasfiltradas = realizarBusquedaNombreyDirector(nombrePelicula,director);
-    mostrarPeliculasHTML(peliculasFiltradas);
+    mostrarPeliculasHTML(peliculasfiltradas);
 }
 
 function realizarBusquedaNombreyDirector(nombrePelicula,director){
