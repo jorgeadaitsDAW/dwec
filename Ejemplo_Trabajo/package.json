@@ -1,0 +1,24 @@
+{
+  "name": "ejemplo_trabajo",
+  "version": "1.0.0",
+  "description": "Ejemplo de Trabajo para Clase",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel": "babel javascript -d out",
+    "comprimir": "uglifyjs ./out/* --cm -o  archivo.min.js",
+    "estilo": "eslint ./javascript/",
+    "build": "npm run estilo && npm run babel && npm run comprimir",
+    "watch": "watch 'npm run build' ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.9.0"
+  },
+  "dependencies": {
+    "uglify-js": "^3.4.9"
+  }
+}

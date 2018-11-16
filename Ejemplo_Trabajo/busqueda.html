@@ -5,46 +5,62 @@
         <title>Busqueda: Mi Videoclub Online</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/estilo.css">
+        <link rel="stylesheet" href="css/nav.css">
     </head>
     <body>
         <header>
             <nav>
-                <ul>
-                    <li><a href="busqueda.html">Página de Búsqueda</a></li>
-                    <li><a href="edicion.html">Página de Edición</a></li>
-                    <li><a href="gestion.html">Página de Gestión</a></li>
-                    <li><a href="usuario.html">Página de Usuario</a></li>
-                </ul>
+                <div class="rejilla12 area12 nav">
+                    <div class="nav-header">
+                        <div class="nav-title">
+                                ADAITS
+                        </div>
+                    </div>
+                    <div class="nav-btn">
+                        <label for="nav-check">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                    </div>
+                    <input type="checkbox" id="nav-check">
+                    <div class="nav-links">
+                        <a href="index.html">Inicio</a>
+                        <a href="busqueda.html">Búsqueda</a>
+                        <a href="edicion.html">Edición</a>
+                        <a href="gestion.html">Gestión</a>
+                        <a href="usuario.html">Usuario</a>
+                    </div>
+                </div> 
             </nav>
         </header>
         <main>
             <section>
-                <h1>LAS PELICULAS DE MI VIDEOCLUB</h1>
-                <div id="peliculas">
-                    
-                </div>
+                <form id="formularioBusqueda">
+                    <div class="area12 busqueda">
+                        <input type="search" id="nombrePelicula" name="nombrePelicula" placeholder="Nombre de la Pelicula"/> 
+                        <input type="search" id="director" name="director" placeholder="Nombre del director"/> 
+    
+                        <button type="button" onclick="filtrarPorNombreyDirector()" class="botonBusqueda">BUSCAR</button>
+                        <button type="button" onclick="resetearFiltros()" class="botonCancelar">Resetear Filtros</button>
+                    </div>
+                </form>
             </section>
             <section>
-                <button type="button" onclick="resetearFiltros()">Resetear Filtros</button>
-                
-                
-                <div id="formularioBusqueda">
-                    <label for="nombrePelicula">Nombre de Pelicula</label>
-                    <input type="search" id="nombrePelicula" name="nombrePelicula"/> 
-
-                    <label for="director">Director de Pelicula</label>
-                    <input type="search" id="director" name="director"/> 
-
-                    <button type="button" onclick="filtrarPorNombreyDirector()">Buscar</button>
+                <div class="area12">
+                    <div class="titulo">MI VIDEOCLUB</div>
+                    <div id="peliculas" class="contenedorFlexbox">
+                    
+                    </div>
                 </div>
             </section>
         </main>
 
-
-        <script src="javascript/funciones/utilidades.js" async defer> </script>
-        <script src="javascript/clases/clases.js" async defer></script>
-        <script src="javascript/clases/objetos.js" async defer> </script>
-        <script src="javascript/funciones/busqueda.js" async defer> </script>
+        <script src="javascript/funciones/utilidades.js" defer> </script>
+        <script src="javascript/clases/clases.js" defer></script>
+        <script src="javascript/clases/objetos.js" defer> </script>
+        <script src="javascript/funciones/busqueda.js" defer> </script>
     </body>
 </html>
