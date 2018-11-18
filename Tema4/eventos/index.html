@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="es_ES">
+    <meta charset="UTF-8">
+    <title>EJEMPLO FORMULARIO</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="eventos.js" cache="false" defer></script>
+</head>
+<body>
+    <div id="ejemploEventos">
+        <h2>EJEMPLO DE FORMULARIO CON EVENTOS</h2>
+        <form id="formulario" action="correcto.html" method="POST">
+        <div class="elementoFormulario">
+            <div class="etiqueta">
+                <label for="nombre" >NOMBRE</label>
+            </div>
+            <!-- Primera forma de asociar eventos. Desde el HTML-->
+            <input id="nombre" type="text" onkeyup="comprobarNombre()"/>
+        </div>
+        <div class="elementoFormulario">
+            <div class="etiqueta">
+                <label for="apellidos" >APELLIDOS:</label>
+            </div>
+            <input id="apellidos" type="text"/>
+        </div>
+        <div class="elementoFormulario">
+            <div class="etiqueta">
+                <label for="edad">EDAD:</label>
+            </div>
+            <input id="edad" type="text"/>
+        </div>
+        <div class="elementoFormulario">
+            <div class="etiqueta">
+                <label for="telefono">TELEFONO:</label>
+            </div>
+            <input id="telefono" type="text"/>
+        </div>
+        <div class="botones">
+            <button >ENVIAR DATOS</button>
+        </div>
+        </form>
+    </div>
+
+</body>
+</html>

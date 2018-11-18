@@ -1,0 +1,15 @@
+.padre{
+    background-color: yellow;
+}
+
+.hijos{
+    background-color: blue;
+}
+
+.primerHijo{
+    border:3px solid orange;
+}
+
+.ultimoHijo{
+    border:3px solid purple;
+}
