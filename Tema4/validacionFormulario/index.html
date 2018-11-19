@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="es_ES">
+    <meta charset="UTF-8">
+    <title>EJEMPLO FORMULARIO</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="validacionFormularioPro.js" cache="false" defer></script>
+</head>
+<body>
+    <div id="ejemploEventos">
+        <h2>EJEMPLO DE FORMULARIO CON EVENTOS</h2>
+        <form id="formulario" action="correcto.html" method="POST">
+        <div class="elementoFormulario">
+            <div class="etiqueta">
+                <label for="nombre" >NOMBRE DEL PROYECTO</label>
+            </div>
+            <input id="nombre" type="text" />
+        </div>
+        <div class="elementoFormulario">
+            <div class="etiqueta">
+                <label for="duracion" >DURACION:</label>
+            </div>
+            <input id="duracion" type="number"/>
+        </div>
+        <div class="elementoFormulario">
+            <div class="etiqueta">
+                <label for="jefe">JEFE:</label>
+            </div>
+            <input id="jefe" type="text"/>
+        </div>
+        <div class="elementoFormulario">
+            <div class="etiqueta">
+                <label for="categoria">CATEGORIA:</label>
+            </div>
+            <select id="categoria" type="text">
+                <option value=""></option>
+                <option value="web">WEB</option>
+                <option value="movil">MOVIL</option>
+                <option value="redes">REDES</option>    
+            </select>
+        </div>
+        <div class="elementoFormulario">
+                <label>Aceptar Terminos</label>
+            <input type="checkbox" id="terminos" value="1" />
+        </div>
+        <div class="botones">
+            <button >ENVIAR DATOS</button>
+        </div>
+        </form>
+    </div>
+
+</body>
+</html>

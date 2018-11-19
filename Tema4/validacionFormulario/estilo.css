@@ -1,0 +1,38 @@
+#ejemploEventos{
+    width:50%;
+    margin:auto;
+}
+
+.elementoFormulario{
+    width:100%;
+    display: flex;
+    justify-content: flex-start;
+    margin:3px;
+}
+
+.etiqueta{
+    width:200px;
+}
+
+.elementoFormulario input{
+    width:200px;
+}
+
+.botones{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top:10px;
+}
+
+.valido{
+    border:1px solid green;
+}
+
+.invalido{
+    border:1px solid red;
+}
+
+.error{
+    color:red;
+}
