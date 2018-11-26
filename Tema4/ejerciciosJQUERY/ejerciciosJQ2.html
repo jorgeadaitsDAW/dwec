@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
+    <script src="scripts/ejercicioJquery2.js" defer> </script>
+    <link rel="stylesheet" href="css/jquery.css" />
+    <title></title>
+</head>
+<body>
+
+<form action="www.google.es" onsubmit="return validarFormulario();">
+    <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre" onchange="esNombreCorrecto()"/>
+    </div>
+
+    <div class="campo">
+        <label for="apellido">Apellido</label>
+        <input type="text" id="apellido" onchange="esApellidoCorrecto()"/>
+    </div>
+
+    <div class="campo">
+        <label for="edad">Edad</label>
+        <input type="text" id="edad" />
+    </div>
+
+    <div class="campo">
+        <label for="dni">DNI</label>
+        <input type="text" id="dni" />
+    </div>
+
+    <div class="campo">
+        <label for="profesion">Profesion</label>
+        <select id="profesion">
+            <option value="bombero">BOMBERO</option>
+            <option value="informatico">INFORMATICO</option>
+            <option value="carpintero">CARPINTERO</option>
+            <option value="ACTOR">ACTOR</option>
+        </select>
+    </div>
+
+    <div class="campo">
+        <label for="hombre">Hombre</label>
+        <input type="checkbox" id="hombre" value="HOMBRE" />
+        <label for="mujer">Mujer</label>
+        <input type="checkbox" id="mujer" value="MUJER" />
+    </div>
+
+    <div >
+        <input type="submit"  id="submit">
+    </div>
+</form>
+
+
+
+</body>
+</html>
