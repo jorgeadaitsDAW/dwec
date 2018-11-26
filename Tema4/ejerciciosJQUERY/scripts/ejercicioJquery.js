@@ -121,7 +121,7 @@ function crearDivs4(numDivs){
     limpiar();
     for(let i = 0;i < numDivs; i++){
         let div = $("<div></div>");
-        div.text(`POS {i}`);
+        div.text(`POS ${i}`);
         $(".elementos").append(div);
 
         for(let j= 0;j <= i;j++){
