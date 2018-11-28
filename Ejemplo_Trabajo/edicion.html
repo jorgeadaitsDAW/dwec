@@ -5,71 +5,55 @@
         <title>Edicion: Mi Videoclub Online</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/fondo.css">
         <link rel="stylesheet" href="css/estilo.css">
         <link rel="stylesheet" href="css/nav.css">
     </head>
     <body>
         <header>
-                <nav>
-                    <div class="rejilla12 area12 nav">
-                        <div class="nav-header">
-                            <div class="nav-title">
-                                    ADAITS
-                            </div>
+            <nav>
+                <div class="nav">
+                    <div class="nav-header">
+                        <div class="nav-title">
+                                ADAITS
                         </div>
-                        <div class="nav-btn">
-                            <label for="nav-check">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </label>
-                        </div>
-                        <input type="checkbox" id="nav-check">
-                        <div class="nav-links">
-                            <a href="home.html">Inicio</a>
-                            <a href="busqueda.html">Búsqueda</a>
-                            <a href="edicion.html">Edición</a>
-                            <a href="gestion.html">Gestión</a>
-                            <a href="usuario.html">Usuario</a>
-                        </div>
-                    </div> 
-                </nav>
-            </header>
-        <main>
-            <section>
-                    <div>
-                        <h1>FORMULARIO PARA INCLUIR PELICULAS</h1>
-                        <form id="formularioPelicula">
-                            <div>
-                                <label for="nombrePelicula">Nombre de Pelicula</label>
-                                <input type="text" id="nombrePelicula" name="nombrePelicula"/> 
-                            </div>
-    
-                            <div>
-                                <label for="director">Director de Pelicula</label>
-                                <input type="text" id="director" name="director"/>
-                            </div>
-    
-                            <div>
-                                <label for="categoria">Categoria de Pelicula</label>
-                                <input type="text" id="categoria" name="categoria"/>
-                            </div>
-                            <button type="button" onclick="incluirPelicula()">Añadir Pelicula</button>
-                        </form>
                     </div>
+                    <div class="nav-btn">
+                        <label for="nav-check">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                    </div>
+                    <input type="checkbox" id="nav-check">
+                    <div class="nav-links">
+                        <a href="index.html">Inicio</a>
+                        <a href="busqueda.html">Búsqueda</a>
+                        <a href="edicion.html">Edición</a>
+                        <a href="gestion.html">Gestión</a>
+                        <a href="usuario.html">Usuario</a>
+                    </div>
+                </div> 
+            </nav>
+        </header>
+        <main>
+                <section>
+                        <h2 class="titulo">MI VIDEOCLUB</h2>
+                        <div id="peliculas" class="contenedorFlexbox">
+                        
+                        </div>
                 </section>
-            <section>
-                <h1>LAS PELICULAS DE MI VIDEOCLUB</h1>
-                <div id="peliculas">
-                    
-                </div>
-            </section>
         </main>
 
+        <footer>
+            <div>
+                ESTE ES EL PIE DE PAGINA
+            </div>
+        </footer>
 
-        <script src="javascript/funciones/utilidades.js" defer> </script>
-        <script src="javascript/clases/clases.js" defer></script>
-        <script src="javascript/clases/objetos.js" defer> </script>
-        <script src="javascript/funciones/edicion.js" defer> </script>
+        <script src="javascript/funciones/utilidades.js" defer cache="false"> </script>
+        <script src="javascript/clases/clases.js" defer cache="false"></script>
+        <script src="javascript/clases/objetos.js" defer cache="false"> </script>
     </body>
 </html>

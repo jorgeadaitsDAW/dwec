@@ -5,32 +5,55 @@
         <title>Gestión: Mi Videoclub Online</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/fondo.css">
         <link rel="stylesheet" href="css/estilo.css">
         <link rel="stylesheet" href="css/nav.css">
     </head>
     <body>
         <header>
             <nav>
-                <ul>
-                    <li><a href="busqueda.html">Página de Búsqueda</a></li>
-                    <li><a href="edicion.html">Página de Edición</a></li>
-                    <li><a href="gestion.html">Página de Gestión</a></li>
-                    <li><a href="usuario.html">Página de Usuario</a></li>
-                </ul>
+                <div class="nav">
+                    <div class="nav-header">
+                        <div class="nav-title">
+                                ADAITS
+                        </div>
+                    </div>
+                    <div class="nav-btn">
+                        <label for="nav-check">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                    </div>
+                    <input type="checkbox" id="nav-check">
+                    <div class="nav-links">
+                        <a href="index.html">Inicio</a>
+                        <a href="busqueda.html">Búsqueda</a>
+                        <a href="edicion.html">Edición</a>
+                        <a href="gestion.html">Gestión</a>
+                        <a href="usuario.html">Usuario</a>
+                    </div>
+                </div> 
             </nav>
         </header>
         <main>
-            <section>
-                <h1>LAS PELICULAS DE MI VIDEOCLUB</h1>
-                <div id="peliculas">
-                    
-                </div>
-            </section>
+                <section>
+                        <h2 class="titulo">MI VIDEOCLUB</h2>
+                        <div id="peliculas" class="contenedorFlexbox">
+                        
+                        </div>
+                </section>
         </main>
 
+        <footer>
+            <div>
+                ESTE ES EL PIE DE PAGINA
+            </div>
+        </footer>
 
-        <script src="javascript/funciones/utilidades.js" defer> </script>
-        <script src="javascript/clases/clases.js" defer></script>
-        <script src="javascript/clases/objetos.js" defer> </script>
+        <script src="javascript/funciones/utilidades.js" defer cache="false"> </script>
+        <script src="javascript/clases/clases.js" defer cache="false"></script>
+        <script src="javascript/clases/objetos.js" defer cache="false"> </script>
     </body>
 </html>

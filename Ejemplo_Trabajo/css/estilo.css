@@ -1,16 +1,20 @@
-main,header,nav,main section, main section form{
+main,
+header,
+nav,
+main section,
+footer,
+nav div{
     display:grid;
     grid-template-columns: repeat(12,1fr);
     grid-column: 1/13;
 }
 
-body,main,header,nav, .rejilla12{
-    display:grid;
-    grid-template-columns: repeat(12,1fr);
-}
 
-
-main,header,nav,.area12{
+main section div,
+main section h2,
+footer div,
+main section form,
+.area12{
     grid-column: 1/13;
 }
 
@@ -22,16 +26,24 @@ main,header,nav,.area12{
 
 .pelicula{
     width:31%;
-    height :20rem;
-    border:1px solid black;
+    height : 20rem;
+    
     margin:1%;
     overflow: hidden;
     column-count: 1;
     text-align: center;
+    box-sizing: border-box;
+    font-size: 0.75rem;
 }
 
+
+.pelicula:hover{
+    transform: scale(1.1,1.1);
+}
+
+
 .pelicula img{
-    object-fit: cover;
+    object-fit: fill;
     width:100%;
     height: 60%;
 }
@@ -120,38 +132,91 @@ input[type="search"] {
 }
 
 .titulo {
-    widows: 100%;
+    grid-column: 1/13;
     text-align: center;
-    margin-left:auto;
-    column-count:1;
 	position: relative;
-	font: 100px Helvetica, Sans-Serif;
-	letter-spacing: -5px;
+	font:  4vh Helvetica, Sans-Serif;
     color: rgba(0,0,255,0.5);
     z-index:-1;
 }
 
 .titulo:after {
-    width: 100%;
-    text-align: center;
 	content: "MI VIDEOCLUB";
-	position: absolute; left: 10px; top: 5px;
+    position: absolute;  
+    top: 5px;
     color: rgba(255,0,0,0.5);
-    z-index:-1;   
+    z-index:-1;
+    left: 0;
+    right: 0;
+    margin-left: 3px;
 }
 
 @media (max-width: 750px) {
     input[type="search"],.botonCancelar,.botonBusqueda {
         width:48%;
     }
-    .titulo {
-        font-size: 50px;
+
+    .pelicula{
+        width:31%;
+        height: 15rem;
+        font-size: 0.5rem;
     }
 
 }
 
-@media (max-width: 300px) {
-    .titulo {
-        font-size: 30px;
+@media (max-width: 500px) {
+    .pelicula{
+        width:48%;
+        height: 10rem;
+        font-size: 0.5rem;
     }
   }
+
+@media (max-width: 300px) {
+
+    .pelicula{
+        width:100%;
+        height: 15rem;
+        font-size: 0.5rem;
+    }
+
+  }
+
+.formulario {
+    grid-column: 4/8;
+    display:flex;
+}
+
+.formulario .campo{
+    width:50%;
+}
+
+.campo label{
+    width:25%;
+}
+
+.campo input{
+    width:75%;
+}
+
+main{
+    min-height: 100vh;
+}
+
+footer div{
+    height:100px;
+    background-color: #174873;
+    text-align: center;
+    width:100%;
+}
+
+input[type=search] {
+    transition: all 0.30s ease-in-out;
+    outline: none;
+    border: 1px solid #DDDDDD;
+}
+   
+input[type=search]:focus{
+    box-shadow: 0 0 5px rgba(2255,140,0,1);
+    border: 1px solid rgba(255,140,0,1);
+}

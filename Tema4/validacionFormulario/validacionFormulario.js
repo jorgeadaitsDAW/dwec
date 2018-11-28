@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     let inputTerminos = document.getElementById("terminos");
     
     inputNombre.addEventListener("keyup", function(event){
-            comprobarCampo(event,comprobarNombre);
+        comprobarCampo(event,comprobarNombre);
     });
 
     inputDuracion.addEventListener("keyup", function(event){
@@ -129,10 +129,10 @@ function comprobarTerminos(inputTerminos){
 function comprobarFormulario(event){
     event.preventDefault();
     let esNombreCorrecto = comprobarNombre(document.getElementById("nombre"));
-    let esDuracionCorrecta = comprobarNombre(document.getElementById("duracion"));
-    let esJefeCorrecto = comprobarNombre(document.getElementById("jefe"));
-    let esCategoriaCorrecta = comprobarNombre(document.getElementById("categoria"));
-    let sonTerminosCorrectos = comprobarNombre(document.getElementById("terminos"));
+    let esDuracionCorrecta = comprobarDuracion(document.getElementById("duracion"));
+    let esJefeCorrecto = comprobarJefe(document.getElementById("jefe"));
+    let esCategoriaCorrecta = comprobarCategoria(document.getElementById("categoria"));
+    let sonTerminosCorrectos = comprobarTerminos(document.getElementById("terminos"));
     if(esNombreCorrecto && esDuracionCorrecta && esJefeCorrecto && esCategoriaCorrecta && sonTerminosCorrectos){
         let formulario = document.getElementById("formulario");
         formulario.submit();

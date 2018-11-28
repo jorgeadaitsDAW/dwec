@@ -6,13 +6,14 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/fondo.css">
         <link rel="stylesheet" href="css/estilo.css">
         <link rel="stylesheet" href="css/nav.css">
     </head>
-    <body>
+     <body>
         <header>
             <nav>
-                <div class="rejilla12 area12 nav">
+                <div class="nav">
                     <div class="nav-header">
                         <div class="nav-title">
                                 ADAITS
@@ -37,30 +38,33 @@
             </nav>
         </header>
         <main>
-            <section>
-                <form id="formularioBusqueda">
-                    <div class="area12 busqueda">
-                        <input type="search" id="nombrePelicula" name="nombrePelicula" placeholder="Nombre de la Pelicula"/> 
-                        <input type="search" id="director" name="director" placeholder="Nombre del director"/> 
-    
-                        <button type="button" onclick="filtrarPorNombreyDirector()" class="botonBusqueda">BUSCAR</button>
-                        <button type="button" onclick="resetearFiltros()" class="botonCancelar">Resetear Filtros</button>
-                    </div>
-                </form>
-            </section>
-            <section>
-                <div class="area12">
-                    <div class="titulo">MI VIDEOCLUB</div>
-                    <div id="peliculas" class="contenedorFlexbox">
-                    
-                    </div>
-                </div>
-            </section>
+                <section>
+                        <form id="formularioBusqueda">
+                            <div class="area12 busqueda">
+                                <input type="search" id="nombrePelicula" name="nombrePelicula" placeholder="Nombre de la Pelicula"/> 
+                                <input type="search" id="director" name="director" placeholder="Nombre del director"/> 
+            
+                                <button type="button" onclick="filtrarPorNombreyDirector()" class="botonBusqueda">BUSCAR</button>
+                                <button type="button" onclick="resetearFiltros()" class="botonCancelar">Resetear Filtros</button>
+                            </div>
+                        </form>
+                </section>
+                <section>
+                        <div id="peliculas" class="contenedorFlexbox">
+                        
+                        </div>
+                </section>
         </main>
 
-        <script src="javascript/funciones/utilidades.js" defer> </script>
-        <script src="javascript/clases/clases.js" defer></script>
-        <script src="javascript/clases/objetos.js" defer> </script>
-        <script src="javascript/funciones/busqueda.js" defer> </script>
+        <footer>
+            <div>
+                ESTE ES EL PIE DE PAGINA
+            </div>
+        </footer>
+
+        <script src="javascript/funciones/utilidades.js" defer cache="false"> </script>
+        <script src="javascript/clases/clases.js" defer cache="false"></script>
+        <script src="javascript/clases/objetos.js" defer cache="false"> </script>
+        <script src="javascript/funciones/busqueda.js" defer cache="false"> </script>
     </body>
 </html>
