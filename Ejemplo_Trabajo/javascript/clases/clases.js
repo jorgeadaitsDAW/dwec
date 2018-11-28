@@ -1,9 +1,10 @@
 class Pelicula{
-	constructor(nombre,director,categoria,img){
+	constructor(nombre,director,categoria,img,descripcion){
 		this.nombre = nombre;
 		this.director = director;
 		this.categoria = categoria;
 		this.img = img;
+		this.descripcion = descripcion;
 	}
 	
 	get nombre(){
@@ -30,6 +31,14 @@ class Pelicula{
 		this._categoria = categoria;
 	}
 
+	get descripcion(){
+		return this._descripcion;
+	}
+
+	set descripcion(descripcion){
+		this._descripcion = descripcion;
+	}
+
 	mostrarEnHTML(nodoHTML){
 		let bloque = document.createElement('div');
 		bloque.className = 'pelicula';
@@ -42,11 +51,13 @@ class Pelicula{
 		categoria.innerHTML = this.categoria;
 		let director = document.createElement('p');
 		director.innerHTML = this.director.nombre;
-
+		let descripcion = document.createElement('p');
+		descripcion.innerHTML = this.descripcion;
 		bloque.append(imagen);
 		bloque.append(titulo);
 		bloque.append(categoria);
 		bloque.append(director);
+		bloque.append(descripcion);
 		nodoHTML.appendChild(bloque);
 	}
 
