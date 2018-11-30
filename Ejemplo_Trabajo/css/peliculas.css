@@ -1,0 +1,69 @@
+.contenedorFlexbox .pelicula:nth-child(even){
+    background-color: rgb(47,79,79);
+}
+
+.contenedorFlexbox .pelicula:nth-child(odd){
+    background-color: rgb(105,105,105);
+}
+
+
+.pelicula{
+    width:31%;
+    margin:1%;
+    overflow: hidden;
+    column-count: 1;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 0.75rem;
+}
+
+
+.pelicula:hover{
+    transform: scale(1.1,1.1);
+}
+
+
+.pelicula img{
+    object-fit: fill;
+    width:100%;
+    height: 200px;
+}
+
+
+.titulo {
+	font:  4vh Helvetica, Sans-Serif;
+    color: rgba(0,0,255,0.5);
+    z-index:-1;
+}
+
+.titulo:after {
+	content: "MI VIDEOCLUB";
+    position: absolute;  
+    top: 5px;
+    color: rgba(255,0,0,0.5);
+    z-index:-1;
+    left: 0;
+    right: 0;
+    margin-left: 3px;
+}
+
+
+@media (max-width: 750px) {
+    .pelicula{
+        width:31%;
+    }
+}
+
+@media (max-width: 500px) {
+    .pelicula{
+        width:48%;
+    }
+  }
+
+@media (max-width: 300px) {
+
+    .pelicula{
+        width:100%;
+    }
+
+  }
