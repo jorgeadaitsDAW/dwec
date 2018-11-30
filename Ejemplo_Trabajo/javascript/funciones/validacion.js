@@ -23,7 +23,7 @@ function validarCampo(inputJquery,funcionValidacion){
 }
 
 function obtenerDivErrores(inputJquery){
-	let padre = inputJquery.parent('.campo');
+	let padre = inputJquery.parents('.campo');
 	let divErrores = padre.find('.errores');
 	return divErrores;
 }
