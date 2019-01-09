@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Ejemplo Ajax</title>
+    <link rel="stylesheet" href="css/css.css">
+    <script src="js/pruebasFetch.js" defer></script>
+</head>
+<body>
+<div id="spinner" class="spinner">
+    <div class="dot1"></div>
+    <div class="dot2"></div>
+</div>
+<div>
+    <h1>PETICIÓN SÍNCRONA</h1>
+    <div>
+        <p>Al pulsar el botón ejercutaremos una petición Ajax Síncrona</p>
+        <button onclick="funcionAjaxSincrona();" >Ejecutar LLamada Sincrona Ajax</button>
+    </div>
+    <div>
+        <h1>Resultados:</h1>
+        <div id="resultadoSincrono"></div>
+    </div>
+</div>
+
+<div>
+    <h1>PETICIÓN ASÍNCRONA</h1>
+    <div>
+        <p>Al pulsar el botón ejercutaremos una petición Ajax Asíncrona</p>
+        <button onclick="funcionAjaxAsincrona();" >Ejecutar LLamada Asincrona Ajax</button>
+    </div>
+    <div>
+        <h1>Resultados:</h1>
+        <div id="resultadoAsincrono"></div>
+    </div>
+</div>
+
+<div>
+    <h1>PETICIÓN ASÍNCRONA CON ERROR</h1>
+    <div>
+        <p>Al pulsar el botón ejercutaremos una petición Ajax Asíncrona con ERROR</p>
+        <button onclick="funcionAjaxAsincronaError();" >Ejecutar LLamada Asincrona Ajax con ERROR</button>
+    </div>
+    <div>
+        <h1>Resultados:</h1>
+        <div id="resultadoAsincronoError"></div>
+    </div>
+</div>
+
+<div>
+    <h1>PETICIÓN ASÍNCRONA GET</h1>
+    <div>
+        <p>Al pulsar el botón ejercutaremos una petición Ajax Asíncrona con datos pasados por GET</p>
+        <button onclick="funcionAjaxAsincronaGET();" >Ejecutar LLamada Asincrona Ajax</button>
+    </div>
+    <div>
+        <h1>Resultados:</h1>
+        <div id="resultadoAsincronoGET"></div>
+    </div>
+</div>
+
+<div>
+    <h1>PETICIÓN ASÍNCRONA POST</h1>
+    <div>
+        <p>Al pulsar el botón ejercutaremos una petición Ajax Asíncrona con datos pasados por POST</p>
+        <button onclick="funcionAjaxAsincronaPOST();" >Ejecutar LLamada Asincrona Ajax</button>
+    </div>
+    <div>
+        <h1>Resultados:</h1>
+        <div id="resultadoAsincronoPOST"></div>
+    </div>
+</div>
+
+<div>
+    <h1>PETICIÓN ASÍNCRONA- OBTENER DATOS XML</h1>
+    <div>
+        <p>Al pulsar el botón ejercutaremos una petición Ajax Asíncrona que tratara los datos XML</p>
+        <button onclick="funcionAjaxAsincronaXML();" >Ejecutar LLamada Asincrona XML</button>
+    </div>
+    <div>
+        <h1>Resultados:</h1>
+        <div id="resultadoAsincronoXML"></div>
+    </div>
+</div>
+
+<div>
+    <h1>PETICIÓN ASÍNCRONA- OBTENER DATOS JSON</h1>
+    <div>
+        <p>Al pulsar el botón ejercutaremos una petición Ajax Asíncrona que tratara los datos JSON</p>
+        <button onclick="funcionAjaxAsincronaJSON();" >Ejecutar LLamada Asincrona JSON</button>
+    </div>
+    <div>
+        <h1>Resultados:</h1>
+        <div id="resultadoAsincronoJSON"></div>
+    </div>
+</div>
+
+
+</body>
+</html>

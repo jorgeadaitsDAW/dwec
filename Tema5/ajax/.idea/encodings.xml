@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/js/funcionesAjax.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/pruebas.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/pruebasAwaitAsync.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/pruebasFetch.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/pruebasJquery.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/servidor/datos.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/servidor/datosGET.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/servidor/datosJSON.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/servidor/datosPOST.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/servidor/datosXML.php" charset="UTF-8" />
+  </component>
+</project>
