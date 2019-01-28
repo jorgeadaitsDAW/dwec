@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Ejemplo Ajax</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" defer></script>
+    <script src="ejemplo2.js" defer></script>
+</head>
+<body>
+<div id="spinner" class="spinner">
+    <div class="dot1"></div>
+    <div class="dot2"></div>
+</div>
+<div>
+    <h1>EJEMPLO DE VALIDACIÓN</h1>
+    <div>
+        <form id="formulario" action="http:://www.google.es" method="POST">
+            <div>
+                <label for="numero1">NUMERO 1:</label>
+                <input id="numero1" name="numero1" value="" type="text" />
+                <div class="divErrores">
+                    
+                </div>
+            </div>
+            <div>
+                <label for="numero2">NUMERO 2:</label>  
+                <input id="numero2" name="numero2" value="" type="text" />
+                <div class="divErrores">
+
+                </div>
+            </div>
+            <button id="boton">BOTON DE ENVIO</button>  
+        </form>
+    </div>
+    <div>
+        <h1>Resultados:</h1>
+        <div id="resultado"></div>
+    </div>    
+</div>
+</body>
+</html>
