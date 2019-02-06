@@ -3,8 +3,9 @@
 namespace App\Http\Requests;
 
 use App\Http\Requests\UserFormRequest;
-use \Illuminate\Validation\ValidationException;
+use Illuminate\Validation\ValidationException;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Contracts\Validation\Validator;
 
 class UserAjaxFormRequest extends UserFormRequest
 {
@@ -26,7 +27,7 @@ class UserAjaxFormRequest extends UserFormRequest
     }
 
 
-    protected function failedValidation($validator)
+    protected function failedValidation(Validador $validator)
     {
         $errors = $validator->errors();
         $response = new JsonResponse([
