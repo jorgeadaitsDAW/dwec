@@ -27,7 +27,7 @@ class UserAjaxFormRequest extends UserFormRequest
     }
 
 
-    protected function failedValidation(Validador $validator)
+    protected function failedValidation(Validator $validator)
     {
         $errors = $validator->errors();
         $response = new JsonResponse([
