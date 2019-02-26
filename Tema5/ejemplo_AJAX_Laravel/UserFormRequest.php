@@ -28,6 +28,7 @@ class UserFormRequest extends FormRequest
 
         $rules['name'] = $this->validarNombre();
         $rules['email'] = $this->validarEmail();
+        $rules['password'] = $this->validarPass();
 
         return $rules;
     }
@@ -37,9 +38,11 @@ class UserFormRequest extends FormRequest
     {
         $mensajesNombre = $this->mensajesNombre();
         $mensajesEmail = $this->mensajesEmail();
+        $mensajesPassword = $this->mensajesPass();
         $mensajes = array_merge(
             $mensajesNombre,
-            $mensajesEmail
+            $mensajesEmail,
+            $mensajesPassword
         );
         return $mensajes;
     }
@@ -51,19 +54,32 @@ class UserFormRequest extends FormRequest
     protected function mensajesNombre(){
         $mensajes = array();
         $mensajes["name.required"] = 'Introduzca el nombre';
-        $mensajes["name.string"] = 'Introduzca el nombre';
+        $mensajes["name.string"] = 'Introduzca una cadena';
         $mensajes["name.max"] = 'Supera el máximo';
         return $mensajes;
     }
 
     protected function validarEmail(){
-        return 'required|string|email|max:10|unique:users';
+        return 'required|string|email|max:20|unique:users';
     }
 
     protected function mensajesEmail(){
         $mensajes = array();
         $mensajes['email.email'] = 'Introduzca un email valido';
         $mensajes['email.required'] = 'Es obligatorio introducir el email';
+        return $mensajes;
+    }
+
+    protected function validarPass(){
+        return 'nullable|required_with:password_confirmation|string|confirmed';
+    }
+
+    protected function mensajesPass(){
+        $mensajes = array();
+        $mensajes['password.nullable'] = 'Introduzca un password';
+        $mensajes['password.required_with'] = 'Debe coincidir ambos passwords';
+        $mensajes['password.string'] = 'Formato incorrecto';
+        $mensajes['password.confirmed'] = 'Debe coincidir ambos passwords';
         return $mensajes;
     }
 

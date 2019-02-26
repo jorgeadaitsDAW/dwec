@@ -9,30 +9,34 @@ function funcionAjaxSincrona(){
     alert("NO HAY SINCRONO");
 }
 
+function gestionarErrores(response){
+    if (!response.ok) {
+        throw Error("SE HA PRODUCIDO UN ERROR AL REALIZAR LA PETICIÓN FETCH:"+response.statusText);
+    }
+    return response;
+}
+
 function funcionAjaxAsincrona(){
 
     alert("SE VA A EJECUTAR LA PETICIÓN");
     fetch("servidor/datos.php", {
         method: 'get'
-    }).then(function(response){ return response.text()})
+    })
+    .then(gestionarErrores)
+    .then(function(response){ return response.text()})
         .then(escribirResultado("resultadoAsincrono"))
         .catch(function(err) {
             console.log(err);
             alert("SE HA PRODUCIDO UN ERROR");
-    });
+    })
 }
 
 function funcionAjaxAsincronaError(){
     alert("SE VA A EJECUTAR LA PETICIÓN");
-    fetch("servidor/datos.php", {
+    fetch("servidor/datosNoExistentes.php", {
         method: 'get'
-    }). then(function(){
-        $("error").html("ERROR");
-    }).catch(function(err) {
-            console.log(err);
-            document.getElementById("resultadoAsincronoError").appendChild(document.createTextNode(err));
-            alert("SE HA PRODUCIDO UN ERROR");
-    });
+    })
+    .then(gestionarErrores)
 }
 
 function funcionAjaxAsincronaGET(){
@@ -40,7 +44,9 @@ function funcionAjaxAsincronaGET(){
     alert("SE VA A EJECUTAR LA PETICIÓN");
     fetch("servidor/datosGET.php?nombre=PEPE&apellido=FLORES", {
         method: 'get'
-    }).then(function(response){ return response.text()})
+    })
+    .then(gestionarErrores)
+    .then(function(response){ return response.text()})
         .then(escribirResultado("resultadoAsincronoGET"))
         .catch(function(err) {
             console.log(err);
@@ -56,7 +62,9 @@ function funcionAjaxAsincronaPOST(){
     fetch("servidor/datosPOST.php", {
         method: 'post',
         body: form
-    }).then(function(response){ return response.text()})
+    })
+    .then(gestionarErrores)
+    .then(function(response){ return response.text()})
         .then(escribirResultado("resultadoAsincronoPOST"))
         .catch(function(err) {
             console.log(err);
@@ -69,12 +77,14 @@ function funcionAjaxAsincronaXML(){
     alert("SE VA A EJECUTAR LA PETICIÓN");
     fetch("servidor/datosXML.php", {
         method: 'get'
-    }).then(function(response){ return response.text()})
+    })
+    .then(gestionarErrores)
+    .then(function(response){ return response.text()})
         .then(str => (new window.DOMParser()).parseFromString(str, "text/xml"))
         .then(tratarResultadoXML)
         .catch(function(err) {
             console.log(err);
-            alert("SE HA PRODUCIDO UN ERROR");
+            alert("SE HA PRODUCIDO UN ERROR AL PARSEAR LOS DATOS");
         });
 }
 
@@ -82,11 +92,13 @@ function funcionAjaxAsincronaJSON(){
     alert("SE VA A EJECUTAR LA PETICIÓN");
     fetch("servidor/datosJSON.php", {
         method: 'get'
-    }).then(function(response){ return response.json()})
+    })
+    .then(gestionarErrores)
+    .then(function(response){ return response.json()})
         .then(tratarResultadoJSON)
         .catch(function(err) {
             console.log(err);
-            alert("SE HA PRODUCIDO UN ERROR");
+            alert("SE HA PRODUCIDO UN ERROR LA PARSEAR LOS DATOS");
         });
 }
 

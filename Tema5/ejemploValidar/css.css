@@ -8,11 +8,9 @@ body>div{
     width: 40px;
     height: 40px;
     position: fixed;
-    left:50%;
-    top:50%;
     text-align: center;
     display: none;
-    z-index: -1;
+    z-index: 1;
     -webkit-animation: sk-rotate 2.0s infinite linear;
     animation: sk-rotate 2.0s infinite linear;
 }
@@ -25,7 +23,6 @@ body>div{
     top: 0;
     background-color: #333;
     border-radius: 100%;
-
     -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
     animation: sk-bounce 2.0s infinite ease-in-out;
 }

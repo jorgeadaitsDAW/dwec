@@ -4,6 +4,17 @@ let numero2Correcto = false;
 
 $(function(){
 
+    asociarEventos();
+    
+}
+
+function comprobarFormulario(){
+    if(numero1Correcto && numero2Correcto){
+        document.getElementById("formulario").submit();
+    }
+}
+
+function asociarEventos(){
     $("#numero1").change(function(){
         validarNumero(this);
     });
@@ -56,12 +67,6 @@ function validarNumero(input){
             $("#spinner").hide();
           }
       })
-}
-
-function comprobarFormulario(){
-    if(numero1Correcto && numero2Correcto){
-        document.getElementById("formulario").submit();
-    }
 }
 
 

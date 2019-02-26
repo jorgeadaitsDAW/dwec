@@ -18,8 +18,8 @@ Route::get('/chusqers/create', 'ChusqersController@create');
 Route::get('/chusqers/{chusqer}', 'ChusqersController@show');
 Route::post('/chusqers/create', 'ChusqersController@store');
 
-Route::post('/register/validar', 'Auth\RegisterController@validacionAjax');
-Route::post('/register/crear', 'Auth\RegisterController@create');
+Route::post('/register/validar', 'Auth\RegisterController@validacionUsuarioAjax');
+
 
 
 

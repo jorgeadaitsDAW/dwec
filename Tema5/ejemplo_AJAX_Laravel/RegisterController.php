@@ -117,7 +117,7 @@ class RegisterController extends Controller
     }
 
     /*Validacion por Ajax con FormRquest*/
-    protected function validacionAjax(UserAjaxFormRequest $request){
+    protected function validacionUsuarioAjax(UserAjaxFormRequest $request){
         //Obtenermos todos los valores y devolvemos un array vacio
         return array();
     }
@@ -126,7 +126,7 @@ class RegisterController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
+     * @param  UserFormRequest  $request
      * @return \App\User
      */
     protected function create(UserFormRequest $request)

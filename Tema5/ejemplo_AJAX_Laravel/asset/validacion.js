@@ -86,7 +86,7 @@ function comprobarEstadoPeticionFormulario(){
 }
 
 function gestionarErrores(input,errores){
-    var hayErrores = false;
+    let hayErrores = false;
     let divErrores = input.next();
     divErrores.html("");
     input.removeClass("bg-success bg-danger");
@@ -99,7 +99,8 @@ function gestionarErrores(input,errores){
             divErrores.append("<div>"+error+"</div>");
         }
     }
-    input.parent().next().remove();
+    //PAra quitar el spiner
+    //input.parent().next().remove();
     return hayErrores;
 }
 
@@ -212,12 +213,37 @@ function validarNombreAxios(){
     axios.post('/register/validar', {
         name: $("#name").val()
     }).then(function(response){
+
             gestionarErrores($("#name"),response.data.name)
         })
         .catch(function (error) {
             console.log(error);
         });
 }
+
+function validarFormularioAxios(){
+
+    let datosFormulario = $("#formulario").serialize();
+    axios.post('/register/validar', {
+        datosFormulario
+    }).then(function(response){
+            let formularioCorrecto = true;
+
+            for(let campo in response.data){
+                if(!gestionarErrores($(`#${campo}`),response.data[$campo])){
+                    formularioCorrecto = false;
+                }
+            }
+            if(formularioCorrecto){
+                let formulario = document.getElementById("formulario");
+                formulario.submit();
+            }
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+}
+
 
 $(function(){
     $("#name").on("change",validarNombreFetch);

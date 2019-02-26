@@ -62,6 +62,18 @@ function asociarEventoAsincrono(){
     $(".pagination > li > a").on("click",obtenerDatosPagina);
 }
 
+
+function obtenerVista($idTab){
+    axios.get(`/obtenerVista/${$idTab}`)
+        .then(function(response){
+            $(`#div${$idTab}`).html(response.data);
+        }).catch(function (error) {
+            console.log(error);
+        });
+}
+
+
+
 $(function(){
     asociarEventoAsincrono();
 });

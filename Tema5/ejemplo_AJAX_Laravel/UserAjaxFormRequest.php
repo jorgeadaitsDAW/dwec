@@ -23,6 +23,10 @@ class UserAjaxFormRequest extends UserFormRequest
             $rules['email'] = $this->validarEmail();
         }
 
+        if($this->exists('password')) {
+            $rules['password'] = $this->validarPass();
+        }
+
         return $rules;
     }
 

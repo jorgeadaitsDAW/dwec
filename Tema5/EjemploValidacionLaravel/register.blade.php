@@ -107,5 +107,5 @@
 </div>
 @endsection
 @push('scripts')
-    <script src="{{ asset('js/validaciones/validacionRegistro.js') }}"></script>
+    <script src="{{ mix('js/validaciones/validacionRegistro.js') }}"></script>
 @endpush
