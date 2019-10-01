@@ -65,7 +65,9 @@ function ejemplosComprobarVar(){
 	console.log("CASO 3");
 	comprobarVar(3);
 	//¿PUEDE ACCEDER DESDE ESTA FUNCION A LAS VARIABLES auxiliarVar, auxiliarVar2, auxiliarVar3?
-
+	console.log(auxiliarVar);
+	console.log(auxiliarVar2);
+	console.log(auxiliarVar3);
 	console.log("FIN EJEMPLOS CON VAR");
 }
 
