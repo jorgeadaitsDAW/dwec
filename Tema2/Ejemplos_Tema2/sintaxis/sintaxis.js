@@ -13,14 +13,14 @@ console.log("VALOR DE varA:"+varA) // ¿Qué aparece por pantalla?
 // No es necesario indicar el tipo de variable
 
 VarA = "EJEMPLO"
-
+var y = 35;
 console.log("VALOR DE varA:"+varA) //¿Cuál es el valor ahora de varA?
 console.log("VALOR DE VarA:"+VarA) //¿Y el valor de VarA?
 // En javascript se diferencia las mayúsculas de las minúsusculas y debemos tener cuidado.
 
 //CREAR UNA FUNCION
 function ejemploCrearFuncion(){
-	console.log("ESTO ES UN EJEMPLO DE LA LLAMADA DE UNA FUNCION");
+	console.log("ESTO ES UN EJEMPLO DE LA LLAMADA DE UNA FUNCION");var y = 35;
 }
 
 //LLAMADA A UNA FUNCION

@@ -7,6 +7,8 @@ function asignacionDeValoresSumar(){
     let x = 0;
     let y = 0;
 
+    x +=3;
+
     return x === 3;
 }
 
@@ -15,6 +17,8 @@ function asignacionDeValoresRestar(){
 
     let x = 0;
     let y = 0;
+
+    x -= -5;
 
     return x === 5;
 }

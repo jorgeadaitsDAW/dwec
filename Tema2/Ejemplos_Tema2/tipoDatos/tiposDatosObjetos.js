@@ -1,4 +1,4 @@
-//TIPOS DE DATOS OBJETOS
+//TIPOS DE DATOS OBJETOSvar y = 35;
 console.log("EJEMPLOS DE TIPOS OBJETOS");
 
 function ejemplosTiposObjetos(){

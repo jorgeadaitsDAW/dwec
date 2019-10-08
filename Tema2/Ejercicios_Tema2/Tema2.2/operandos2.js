@@ -6,8 +6,9 @@
 function concatenarCadenas(){
 
     let clase = 0;
-    let x = "";
-    let y = "";
+    let x = "ALUMNO_";
+    let y = "DAW_2017";
+    let resultado = x + y;
 
     return resultado === "ALUMNO_DAW_2017";
 }
