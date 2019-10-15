@@ -164,9 +164,26 @@ function esPassValido(pass){
         if( pass.search("!") !== -1 
             || 
             pass.search("?") !== -1){
-             for(let i = 0;i<pass.length;i++){
-                if(pass[i]=== pass[i].toLocaleUpperCase()){
-
+             if(pass === pass.toLocaleUpperCase()){
+                let contadorNumeros = 0;
+                for(let i = 0;i< pass.length;i++){
+                    switch(pass[i]){
+                        case "0":
+                        case "1":
+                        case "2":
+                        case "3":
+                        case "4":
+                        case "5":
+                        case "6":
+                        case "7":
+                        case "8":
+                        case "9":
+                            contadorNumeros++;
+                            break;                                    
+                    }
+                }
+                if(contadorNumeros >=2){
+                    esValido = true;
                 }
              }   
         }
