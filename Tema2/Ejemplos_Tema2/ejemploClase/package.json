@@ -1,0 +1,23 @@
+{
+  "name": "ejemploclase",
+  "version": "1.0.0",
+  "description": "ejemplo de clase",
+  "main": "index.js",
+  "scripts": {
+     "arreglar-estilo":"npx eslint --fix ./src/",  
+     "estilo" :"npx eslint ./src/",
+     "traducir"  :"npx babel src -d out",
+     "minimizar" :"npx uglifyjs 'out/*' --cm -o 'dest/archivo.min.js'",
+     "build": "npm run arreglar-estilo && npm run traducir && npm run minimizar"
+  },
+  "author": "Jorge",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^6.5.1",
+    "jsdoc": "^3.6.3",
+    "uglify-js": "^3.6.3"
+  },
+  "dependencies": {}
+}
