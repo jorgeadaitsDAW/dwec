@@ -38,6 +38,6 @@ function esValidoFormatoRGB(color){
 //Por ejemplo: http://www.prueba.es?ejemplo=1 =>no valido
 //Por ejemplo: http://www.prueba.es => No valido
 //Por ejemplo: https://www.prueba?hola=1&holita=2&holar=3 =>No valido
-function esValidaURL(color){
+function esValidaURL(url){
 
 }
