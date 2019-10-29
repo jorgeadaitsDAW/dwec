@@ -17,4 +17,4 @@ function crearObjeto(){
         console.log(`LA priopiedad es: ${y}- ${p} ${y[p]}`);
     }
 
-}
+}``
