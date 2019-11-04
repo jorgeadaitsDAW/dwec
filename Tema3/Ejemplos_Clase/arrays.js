@@ -237,3 +237,4 @@ function acumuladorEdades(acumulador,valorActual){
     x.edad = acumulador.edad + valorActual.edad;
     return x;
 }
+
