@@ -9,3 +9,15 @@
 .divEjemplo{
     border:2px solid green;
 }
+
+.elementoDiv{
+    border:1px solid black;
+}
+
+.divImpar{
+    background-color: green;
+}
+
+.divPar{
+    background-color: red;
+}
