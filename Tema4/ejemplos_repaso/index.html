@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="es_ES">
+    <meta charset="UTF-8">
+    <title>EJEMPLO DOM</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="repaso.js" cache="false"></script>
+</head>
+<body>
+    <h1>CLASE DE REPASO</h1>
+    <div class="cuadroEjercicios">
+    <h2>PRIMER EJERCICIO</h2>
+        <div>
+            <h3>CREAR UN BOTON QUE MUESTRE LOS ANIMALES</h3>
+            <div id="listadoAnimales">
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="cuadroEjercicios">
+        <h2>SEGUNDO EJERCICIO</h2>
+        <div>
+            <h3>CREAR UN BOTON QUE MUESTRE LOS ANIMALES DE LA ESPECIE QUE INDIQUEMOS EN EL INPUT</h3>
+            <form>
+                <label for="esp">ESPECIE</label>
+                <select id="esp">
+                    <option value="">NINGUNA</option>
+                    <option value="perro">PERRO</option>
+                    <option value="gato">GATO</option>
+                    <option value="caballo">CABALLO</option>
+                    <option value="conejo">CONEJO</option>
+                </select>
+            </form>
+        </div>
+    </div>
+
+    <div class="cuadroEjercicios">
+        <h2>TERCER EJERCICIO</h2>
+        <div>
+            <h3>CREAR UN BOTON QUE MUESTRE LOS ANIMALES ORDENADOS POR NOMBRE DESCENDENTE</h3>
+            <div id="listadoAnimalesOrdenados"></div>
+        </div>
+    </div>
+            
+    <div class="cuadroEjercicios">
+    <h2>CUARTO EJERCICIO</h2>
+    <div>
+        <h3>FORMULARIO PARA AÑADIR ANIMALES A LA LISTA. HAY QUE VALIDAR LOS DATOS</h3>
+        <form>
+            <div>
+                <label for="nombre">NOMBRE</label>
+                <input id="nombre"/>
+                <div id="erroresNombre">
+                    
+                </div>
+            </div>
+            <div>
+                <label for="especie">ESPECIE</label>
+                <select id="especie">
+                    <option value="perro">PERRO</option>
+                    <option value="gato">GATO</option>
+                    <option value="caballo">CABALLO</option>
+                </select>
+                <div id="erroresEspecie">
+                        
+                </div>
+            </div>
+            <div>
+                <label for="raza">RAZA</label>
+                <input id="raza"/>
+                <div id="erroresRaza">
+                        
+                </div>
+            </div>
+            <div>
+                <label for="vida">VIDA</label>
+                <input id="vida"/>
+                <div id="erroresVida">
+                            
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+</body>
+</html>

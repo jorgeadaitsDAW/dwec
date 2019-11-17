@@ -1,0 +1,39 @@
+.prueba{
+    border:1px dashed purple;
+}
+
+.prueba2{
+    color:yellow;
+}
+
+.divEjemplo{
+    border:2px solid green;
+}
+
+.cuadrado{
+    width:200px;
+    height:200px;
+    border:1px solid black;
+}
+
+.error{
+    color:red;
+}
+
+.inputErroneo{
+    border:1px solid red;
+    color:white;
+    background-color: pink;
+}
+
+.inputCorrecto{
+    border:1px solid green;
+    color:white;
+    background-color: aquamarine;
+}
+
+.cuadroEjercicios{
+    width:100%;
+    border:1px solid black;
+    margin-bottom: 10px;
+}
