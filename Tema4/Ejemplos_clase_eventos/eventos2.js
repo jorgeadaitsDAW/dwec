@@ -69,4 +69,4 @@ function ocultar_mostrar_pass(event){
         boton.innerHTML = "Ocultar";
         inputPass.type = "text";
     }
-}
+}keyUp

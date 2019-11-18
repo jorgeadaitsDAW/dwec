@@ -8,10 +8,11 @@
 </head>
 <body>
     <h1>CLASE DE REPASO</h1>
-    <div class="cuadroEjercicios">
+   <div class="cuadroEjercicios">
     <h2>PRIMER EJERCICIO</h2>
         <div>
             <h3>CREAR UN BOTON QUE MUESTRE LOS ANIMALES</h3>
+            <button id="mostrarAnimales">Mostrar Animales</button>
             <div id="listadoAnimales">
 
             </div>
@@ -33,31 +34,36 @@
                 </select>
             </form>
         </div>
+        <div id="listadoAnimalesFiltrados"
+        ></div>
     </div>
 
     <div class="cuadroEjercicios">
         <h2>TERCER EJERCICIO</h2>
         <div>
             <h3>CREAR UN BOTON QUE MUESTRE LOS ANIMALES ORDENADOS POR NOMBRE DESCENDENTE</h3>
+            <button id="botonMostrarOrdenados">Mostrar Animales Ordenados</button>
             <div id="listadoAnimalesOrdenados"></div>
         </div>
     </div>
-            
+   
     <div class="cuadroEjercicios">
     <h2>CUARTO EJERCICIO</h2>
     <div>
         <h3>FORMULARIO PARA AÑADIR ANIMALES A LA LISTA. HAY QUE VALIDAR LOS DATOS</h3>
         <form>
             <div>
+                <div>SOLO MAYÚSCULAS y SÓLO LETRAS</div>
                 <label for="nombre">NOMBRE</label>
                 <input id="nombre"/>
-                <div id="erroresNombre">
+                <div id="erroresNombre" class="error">
                     
                 </div>
             </div>
             <div>
                 <label for="especie">ESPECIE</label>
                 <select id="especie">
+                        <option value="">NINGUNA</option>
                     <option value="perro">PERRO</option>
                     <option value="gato">GATO</option>
                     <option value="caballo">CABALLO</option>
@@ -80,6 +86,7 @@
                             
                 </div>
             </div>
+            <button>AÑADIR ANIMAL</button>
         </form>
     </div>
     </div>
