@@ -8,7 +8,59 @@
 </head>
 <body>
     <h1>CLASE DE REPASO</h1>
-   <div class="cuadroEjercicios">
+    
+    <div class="cuadroEjercicios">
+    <h2>CUARTO EJERCICIO</h2>
+    <div>
+        <h3>FORMULARIO PARA AÑADIR ANIMALES A LA LISTA. HAY QUE VALIDAR LOS DATOS</h3>
+        <form id="formularioCrearAnimal" action="prueba.php" method="POST">
+            <div>
+                <div>SOLO MAYÚSCULAS y SÓLO LETRAS</div>
+                <label for="nombre">NOMBRE</label>
+                <input id="nombre"/>
+                <div id="erroresNombre" class="error">
+                    
+                </div>
+            </div>
+            <div>
+                <label for="especie">ESPECIE</label>
+                <select id="especie">
+                        <option value="">NINGUNA</option>
+                    <option value="perro">PERRO</option>
+                    <option value="gato">GATO</option>
+                    <option value="caballo">CABALLO</option>
+                </select>
+                <div id="erroresEspecie">
+                        
+                </div>
+            </div>
+            <div>
+                <label for="raza">RAZA</label>
+                <input id="raza"/>
+                <div id="erroresRaza">
+                        
+                </div>
+            </div>
+            <div>
+                <label for="vida">VIDA</label>
+                <input id="vida"/>
+                <div id="erroresVida">
+                            
+                </div>
+            </div>
+            <input type="submit" value="Crear Animal"></button>
+        </form>
+        <div id="animalCreado">
+            <h1>ANIMAL CREADO</h1>
+            <div id="nombreAnimal"></div>
+            <div id="especieAnimal"></div>
+            <div id="razaAnimal"></div>
+            <div id="vidaAnimal"></div>
+        </div>
+    </div>
+    </div>
+    
+    <div class="cuadroEjercicios">
     <h2>PRIMER EJERCICIO</h2>
         <div>
             <h3>CREAR UN BOTON QUE MUESTRE LOS ANIMALES</h3>
@@ -45,50 +97,6 @@
             <button id="botonMostrarOrdenados">Mostrar Animales Ordenados</button>
             <div id="listadoAnimalesOrdenados"></div>
         </div>
-    </div>
-   
-    <div class="cuadroEjercicios">
-    <h2>CUARTO EJERCICIO</h2>
-    <div>
-        <h3>FORMULARIO PARA AÑADIR ANIMALES A LA LISTA. HAY QUE VALIDAR LOS DATOS</h3>
-        <form>
-            <div>
-                <div>SOLO MAYÚSCULAS y SÓLO LETRAS</div>
-                <label for="nombre">NOMBRE</label>
-                <input id="nombre"/>
-                <div id="erroresNombre" class="error">
-                    
-                </div>
-            </div>
-            <div>
-                <label for="especie">ESPECIE</label>
-                <select id="especie">
-                        <option value="">NINGUNA</option>
-                    <option value="perro">PERRO</option>
-                    <option value="gato">GATO</option>
-                    <option value="caballo">CABALLO</option>
-                </select>
-                <div id="erroresEspecie">
-                        
-                </div>
-            </div>
-            <div>
-                <label for="raza">RAZA</label>
-                <input id="raza"/>
-                <div id="erroresRaza">
-                        
-                </div>
-            </div>
-            <div>
-                <label for="vida">VIDA</label>
-                <input id="vida"/>
-                <div id="erroresVida">
-                            
-                </div>
-            </div>
-            <button>AÑADIR ANIMAL</button>
-        </form>
-    </div>
     </div>
 </body>
 </html>

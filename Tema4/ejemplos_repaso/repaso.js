@@ -24,6 +24,9 @@ document.addEventListener("DOMContentLoaded",function(){
 
     let inputNombre = document.getElementById("nombre");
     inputNombre.addEventListener("keyup",validarNombre);
+
+    let formulario = document.getElementById("formularioCrearAnimal");
+    formulario.addEventListener("submit",validarFormulario);
 })
 
 
@@ -72,7 +75,7 @@ function mostrarAnimalesOrdenados(){
 }
 
 
-function validarNombre(){
+function validarNombre(event){
     let esCorrecto = true;
     let inputNombre = document.getElementById("nombre");
     let valor = inputNombre.value.trim();
@@ -110,6 +113,63 @@ function validarNombre(){
     }else{
         inputNombre.classList.add("inputErroneo");
     }
+    return esCorrecto;
+}
 
+function validarVida(){
+    return true;
+}
+
+function validarEspecie(){
+    return true;
+}
+
+function validarRaza(){
+    return true;
+}
+
+function validarVida(){
+    return true;
+}
+
+function validarFormulario(event){
+    event.preventDefault();
+    let esFormularioCorrecto = false;
+    let esCorrectoNombre = validarNombre();
+    let esCorrectoEspecie = validarEspecie();
+    let esCorrectoRaza = validarRaza();
+    let esVidaCorrecta = validarVida();
+    if(esCorrectoRaza 
+        && esCorrectoNombre 
+        && esCorrectoEspecie){
+        esFormularioCorrecto = true;
+    }
+
+    if(esFormularioCorrecto){
+        let formulario = event.target;
+        //formulario.submit();
+        
+        //Crear un objeto animal y añadirlo a la lista de animales
+        let animal = {};
+        let nombre = document.getElementById("nombre").value.trim();
+        let especie = document.getElementById("especie").value;
+        let raza = document.getElementById("raza").value.trim();
+        let vida = document.getElementById("vida").value.trim();
+        animal.nombre = nombre;
+        animal.especie = especie;
+        animal.vida = vida;
+        animal.raza = raza;
+        listadoAnimales.push(animal);
+        alert("SE HA CREADO EL ANIMAL CORRECTAMENTE");
+        formulario.reset();
+
+        let divNombreAnimal = document.getElementById("nombreAnimal");
+        divNombreAnimal.innerHTML = animal.nombre; 
+
+
+
+    }else{
+        alert("HAY ERRORES EN EL FORMULARIO");
+    }
 
 }
