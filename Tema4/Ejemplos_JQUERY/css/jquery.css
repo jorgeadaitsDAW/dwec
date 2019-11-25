@@ -24,3 +24,13 @@
     display: grid;
     grid-template-columns:1fr 1fr 1fr;
 }
+
+.inputPar{
+    background-color:blue;
+    color:white;
+}
+
+.inputImpar{
+    background-color:green;
+    color:orange;
+}
