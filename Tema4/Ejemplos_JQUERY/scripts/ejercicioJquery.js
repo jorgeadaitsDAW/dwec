@@ -2,6 +2,8 @@ $(function(){
     $("#botonCrear").click(crearElementos);
     $("#botonColorear").click(colorear);
     $("#botonBorrar").click(borrarInput);
+    $("#botonEsconder").click(esconder);
+    $("#botonMostrar").click(mostrar);
 });
 
 function crearElementos(){
@@ -46,3 +48,22 @@ function borrarInput(){
     }
 }
 
+function esconder(){
+    let posi = $("#posi2").val();
+    let posj = $("#posj2").val();
+    let elementoABorrar = $(`[id='${posi}_${posj}']`);
+    let hermanoAnterior = elementoABorrar.prev();
+    let hermanoPosterior = elementoABorrar.next();
+    hermanoAnterior.addClass("divOculto");
+    hermanoPosterior.addClass("divOculto");
+}
+
+function mostrar(){
+    let posi = $("#posi2").val();
+    let posj = $("#posj2").val();
+    let elementoABorrar = $(`[id='${posi}_${posj}']`);
+    let hermanoAnterior = elementoABorrar.prev();
+    let hermanoPosterior = elementoABorrar.next();
+    hermanoAnterior.removeClass("divOculto");
+    hermanoPosterior.removeClass("divOculto");
+}

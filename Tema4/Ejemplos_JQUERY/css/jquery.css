@@ -34,3 +34,7 @@
     background-color:green;
     color:orange;
 }
+
+.divOculto{
+    visibility: hidden;
+}
