@@ -3,24 +3,37 @@
 <head lang="en">
     <meta charset="UTF-8">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>
-    <script src="scripts/ejercicioValidacion.js"> </script>
+    <script src="scripts/ejercicioValidacion.js" cache="false"> </script>
     <link rel="stylesheet" href="css/jquery.css" />
     <title></title>
 </head>
 <body>
 <h1>Ejercicio Validacion</h1>
+<ul>
+    <li>Nombre del proyecto con más de 3 letras, sólo mayúsculas y con al menos un número</li>
+    <li>Duración o Tiempo sólo valen números y más de 2 números</li>
+    <li>El tipo del proyecto debe estar seleccionado y si se ha elegido "Desarrollo", el tiempo no puede ser menor que 5</li>
+    <li>Debe marcarse un beneficio</li>
+    <li>Debe seleccionarse al menos un personal</li>
+</ul>
+
 <form id="formulario" action="correcto.html" method="POST">
     <div class="elementoFormulario">
         <div class="etiqueta">
             <label for="nombre" >NOMBRE DEL PROYECTO</label>
         </div>
         <input id="nombre" type="text" />
+        <div id="erroresNombre"
+        ></div>
     </div>
     <div class="elementoFormulario">
         <div class="etiqueta">
             <label for="duracion" >DURACION:</label>
         </div>
         <input id="duracion" type="number"/>
+        <div id="erroresDuracion">
+
+        </div>
     </div>
     <div class="elementoFormulario">
         <div class="etiqueta">
@@ -33,6 +46,9 @@
             <option value="Analisis">Análisis</option>
             <option value="Refactor">Refactor</option>    
         </select>
+        <div id="erroresTipo">
+
+        </div>
     </div>
     <div class="elementoFormulario">
         <div class="etiqueta">
@@ -43,6 +59,9 @@
 
         <label>Largo Plazo</label>
         <input type="radio" name="beneficios" id="largo" value="1" />
+        <div id="erroresBeneficios">
+
+        </div>
     </div>
     <div class="elementoFormulario">
         <div class="etiqueta">
@@ -56,6 +75,9 @@
 
         <label>Jefe Proyecto</label>
         <input type="checkbox" name="personal[]" id="largo" value="Jefe de Proyecto" />
+        <div id="erroresPersonal">
+
+        </div>
     </div>
     <div class="botones">
         <button >ENVIAR DATOS</button>
