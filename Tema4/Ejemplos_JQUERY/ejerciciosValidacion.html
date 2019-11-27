@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>
+    <script src="scripts/ejercicioValidacion.js"> </script>
+    <link rel="stylesheet" href="css/jquery.css" />
+    <title></title>
+</head>
+<body>
+<h1>Ejercicio Validacion</h1>
+<form id="formulario" action="correcto.html" method="POST">
+    <div class="elementoFormulario">
+        <div class="etiqueta">
+            <label for="nombre" >NOMBRE DEL PROYECTO</label>
+        </div>
+        <input id="nombre" type="text" />
+    </div>
+    <div class="elementoFormulario">
+        <div class="etiqueta">
+            <label for="duracion" >DURACION:</label>
+        </div>
+        <input id="duracion" type="number"/>
+    </div>
+    <div class="elementoFormulario">
+        <div class="etiqueta">
+            <label for="tipo">Tipo:</label>
+        </div>
+        <select id="categoria" type="text">
+            <option value="">Ninguno</option>
+            <option value="Redes">Redes</option>
+            <option value="Desarrollo">Desarrollo</option>
+            <option value="Analisis">Análisis</option>
+            <option value="Refactor">Refactor</option>    
+        </select>
+    </div>
+    <div class="elementoFormulario">
+        <div class="etiqueta">
+            <label for="tipo">Beneficios:</label>
+        </div>
+        <label>Corto Plazo</label>
+        <input type="radio" name="beneficios"  id="corto" value="1" />
+
+        <label>Largo Plazo</label>
+        <input type="radio" name="beneficios" id="largo" value="1" />
+    </div>
+    <div class="elementoFormulario">
+        <div class="etiqueta">
+            <label for="tipo">Personal:</label>
+        </div>
+        <label>Programador</label>
+        <input type="checkbox" name="personal[]"  id="corto" value="Programador" />
+
+        <label>Analista</label>
+        <input type="checkbox" name="personal[]" id="largo" value="Analista" />
+
+        <label>Jefe Proyecto</label>
+        <input type="checkbox" name="personal[]" id="largo" value="Jefe de Proyecto" />
+    </div>
+    <div class="botones">
+        <button >ENVIAR DATOS</button>
+    </div>
+</form>
+
+</body>
+</html>

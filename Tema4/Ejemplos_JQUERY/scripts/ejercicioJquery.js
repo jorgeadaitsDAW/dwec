@@ -67,3 +67,5 @@ function mostrar(){
     hermanoAnterior.removeClass("divOculto");
     hermanoPosterior.removeClass("divOculto");
 }
+
+
