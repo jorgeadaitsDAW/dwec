@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded",function(){
     let formularioVotar = document.getElementById("formularioVotar");
     formularioVotar.addEventListener("submit",votarAnimal);
 
+    botonRecargar.addEventListener("click",obtenerAnimalesVotados);
 })
 
 function crearSelectUsuario(idUsuario){
@@ -35,7 +36,7 @@ function crearSelectAnimales(idAnimal){
 }
 
 function obtenerAnimalesVotados(event){
-    let selector = event.target;
+    let selector = document.getElementById("selectUsuario");
     let idUsuarioSeleccionado = selector.value;
     let ulAnimalesVotados = document.getElementById("animales_votados");
     ulAnimalesVotados.innerHTML = "";
@@ -83,5 +84,7 @@ function votarAnimal(event){
         let puntuacion = document.getElementById("puntuacion");
         let observaciones = document.getElementById("observaciones");
         crearVoto(usuarioAVotar,animalAVotar,puntuacion,observaciones);
+        formulario.reset();
+        obtenerAnimalesVotados();
     }
 }
