@@ -7,7 +7,8 @@
     <script src="usuarios.js" cache="false"></script>
 </head>
 <body>
-<h1>EJEMPLO DE MOSTRAR LOS VOTOS DE UN USUARIO CON LOS ANIMALES</h1>
+<div>
+    <h1>EJEMPLO DE MOSTRAR LOS VOTOS DE UN USUARIO CON LOS ANIMALES</h1>
     <div>
     <h2>SELECCIONA EL USUARIO</h1>
         <select id="selectUsuario" >
@@ -20,7 +21,37 @@
             
         </ul>
     </div>
+</div>
+<div>
+    <h1>Ejemplo de votar</h1>
+    <form id="formularioVotar">
+    <div>
+        <span>USUARIO:</span>    
+        <select id="selectUsuarioVotar" >
+            <option value=""></option>
+        </select>
+    </div>
+    <h2>SELECCIONA EL USUARIO</h1>
+        <span>ANIMAL:</span>
+        <select id="selectAnimalVotar" >
+            <option value=""></option>
+        </select>
+    </div>
+    <div>
+        <span>PUNTUACION:</span>
+        <input id="gusta" type="radio" name="puntuacion" value="1" />
+        <label>ME GUSTA</label>
+        <input id="no_gusta" type="radio" name="puntuacion" value="0" />
+        <label>NO GUSTA</label>
+    </div>
+    <div>
+        <label for="observaciones">Observaciones</label>
+        <textarea id="observaciones" name="observaciones">
 
+        </textarea>
+    </div>
+    <input type="submit" value="votar">
+</div>
 
 </body>
 </html>
