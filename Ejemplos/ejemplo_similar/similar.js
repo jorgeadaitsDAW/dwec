@@ -27,16 +27,16 @@ function obtenerAnimalesSimilares(event){
     if(idAnimalSeleccionado !== ""){
         let animalesMostrados = 0;
         let animalSeleccionado = listaAnimales.find( animal => animal.id === parseInt(idAnimalSeleccionado));
-        spanNombreAnimal.innerHTML = animalSeleccionado.nombre;
+        spanNombreAnimal.innerHTML = `${animalSeleccionado.nombre} (${animalSeleccionado.especie}-${animalSeleccionado.raza})`;
         
         let animalesSimilares = listaAnimales
                                     .filter(animal => animal.especie === animalSeleccionado.especie)
                                     .filter(animal => animal.raza === animalSeleccionado.raza)
-                                    .filter(animal => animal.id != animalSeleccionado.id)
+                                    .filter(animal => animal.id !== animalSeleccionado.id)
 
         animalesSimilares.forEach(function(animalSimilar){
             let liAnimal = document.createElement("li");
-            liAnimal.innerHTML = animalSimilar.nombre;
+            liAnimal.innerHTML = `${animalSimilar.nombre} (${animalSimilar.especie}-${animalSimilar.raza})`;
             ulAnimalesSimilares.appendChild(liAnimal);
             animalesMostrados++;
         });
