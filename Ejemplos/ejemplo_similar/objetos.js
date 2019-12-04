@@ -198,7 +198,7 @@ let Peter = new Animal(13,"Peter","Perro","Caniche",11);
 let Lola = new Animal(14,"Lola","Gato","Siames",15);
 let Rita = new Animal(15,"Rita","Pajaro","Loro",3);
 let Exodus = new Animal(16,"Exodus","Conejo","Comun",1);
-let listaAnimales = [];
+let listaAnimales = []; 
 
 listaAnimales.push(thor);
 listaAnimales.push(capitanAmerica);
