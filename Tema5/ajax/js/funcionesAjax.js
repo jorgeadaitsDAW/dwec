@@ -98,6 +98,8 @@ function comprobarEstadoPeticion(){
             // Escribimos la respuesta recibida de la petición AJAX en el objeto DIV
                 document.getElementById("resultadoAsincrono").appendChild(document.createTextNode(this.responseText));
                 alert("Terminó la petición AJAX");
+            }else{
+                alert("HA HABIDO UN ERROR. INTENTELO MAS TARDE.")
             }
             break;
     }
