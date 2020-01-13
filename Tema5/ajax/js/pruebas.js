@@ -34,7 +34,7 @@ function funcionAjaxAsincronaGET(){
 
 
 function funcionAjaxAsincronaPOST(){
-    var datos = "nombre=PEPITO&apellido=FLORES JIMENEZ"
+    var datos = "nombre=Juanito&apellido=LOPEZ";
     llamadaAsincrona2("servidor/datosPOST.php","POST",datos,"",escribirResultado("resultadoAsincronoPOST"));
 }
 
