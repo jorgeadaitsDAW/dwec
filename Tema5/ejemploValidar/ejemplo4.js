@@ -34,7 +34,7 @@ function validarFormulario(){
 
 function realizarValidacion(datosPost,funcionCallback){
     $.ajax({
-        url:"/ejemploValidar/validarNumero.php",
+        url:"./validarNumero.php",
         method:'POST',
         data:datosPost,
         type:"JSON",

@@ -27,7 +27,7 @@ function validarNumero(listaInputs,ejecutarFormulario){
     );
     $("#spinner").show();
     procesos.push(true);     
-    axios.post("/ejemploValidar/validarNumero.php",
+    axios.post("./validarNumero.php",
         params
     ).then(function(respuesta){
             let todoCorrecto = true;

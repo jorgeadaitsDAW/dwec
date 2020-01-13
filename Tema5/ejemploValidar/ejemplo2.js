@@ -27,7 +27,7 @@ function validarNumero(listaInputs,ejecutarFormulario){
     );
     
     $.ajax({
-        url:"/ejemploValidar/validarNumero.php",
+        url:"./validarNumero.php",
         method:'POST',
         data:datosPOST,
         type:"JSON",

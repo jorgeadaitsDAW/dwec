@@ -36,7 +36,7 @@ function asociarEventos(){
 
 function validarNumero(input){
     $.ajax({
-        url:"/ejemploValidar/validarNumero.php",
+        url:"./validarNumero.php",
         method:'POST',
         data:{numero:$(input).val()},
         type:"JSON",
