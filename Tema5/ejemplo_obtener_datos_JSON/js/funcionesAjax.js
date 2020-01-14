@@ -1,8 +1,14 @@
 document.addEventListener("DOMContentLoaded",function(){
-    let formularioAjax = document.getElementById("formulario");
-    formularioAjax.addEventListener("submit",function(event){
+    let formularioAjaxMYSQL = document.getElementById("formularioMYSQL");
+    formularioAjaxMYSQL.addEventListener("submit",function(event){
         event.preventDefault();
-        realizarPeticionAsincrona();
+        realizarPeticionAsincronaMYSQL();
+    });
+
+    let formularioAjaxPDO = document.getElementById("formularioPDO");
+    formularioAjaxPDO.addEventListener("submit",function(event){
+        event.preventDefault();
+        realizarPeticionAsincronaPDO();
     });
 })
 
@@ -36,37 +42,55 @@ function objetoXHR(){
     throw new Error("No se pudo crear el objeto XMLHTTPRequest");
 }
 
+function realizarPeticionAsincronaMYSQL(){
+    let divResultado =  document.getElementById("resultado");
+    divResultado.innerHTML = "";
+    document.getElementById("spinner").style ="display:block";
+    miXHR = new objetoXHR();
+    miXHR.open("GET", "servidor/datosMYSQL.php", true);
+    miXHR.onreadystatechange = comprobarEstadoPeticion;
+    miXHR.send(null);
+}
+
+function realizarPeticionAsincronaPDO(){
+    let divResultado =  document.getElementById("resultado");
+    divResultado.innerHTML = "";
+    document.getElementById("spinner").style ="display:block";
+    miXHR = new objetoXHR();
+    miXHR.open("GET", "servidor/datosPDO.php", true);
+    miXHR.onreadystatechange = comprobarEstadoPeticion;
+    miXHR.send(null);
+}
+
 function comprobarEstadoPeticion(){
     switch(this.readyState){
         case 4:
             if (this.status == 200){
-                let divRespuesta = document.getElementById("respuesta");
-                divRespuesta.innerHTML = this.responseText;
-                alert("Terminó la petición AJAX");
+                crearTablaJSON(this.responseText);
             }else{
                 alert("HA HABIDO UN ERROR. INTENTELO MAS TARDE.")
             }
             document.getElementById("spinner").style ="display:none";
-            break;
+            break;    
     }
 }
 
-function realizarPeticionAsincrona(){
-    document.getElementById("spinner").style ="display:block";
-    let nombre = document.getElementById("nombre").value;
-    let apellidos = document.getElementById("apellidos").value;
-    let edad = document.getElementById("edad").value;
+function crearTablaJSON(respuesta){
+    let divResultado =  document.getElementById("resultado");
+    divResultado.innerHTML = "";
+    var resultados= JSON.parse(respuesta);
+    let salida="<table border='1'><tr><th>NOMBRE</th><th>GENERO</th><th>DIRECTOR</th><th>DURACION</th></tr>";
 
-    alert("SE CREA EL OBJETO XHR");
-    miXHR = new objetoXHR();
+    for (let i=0; i < resultados.length; i++){
+        let objeto = resultados[i];
+        salida+="<tr><td>"+objeto.nombre+"</td><td>"+
+        objeto.genero+"</td><td>"+objeto.director+"</td><td>"+
+        objeto.duracion +"</td></tr>";
+    }
 
-    alert("SE CREA LA PETICIÓN ASÍNCRONA")
-    miXHR.open("POST", "servidor/datosPOST.php", true);
-    miXHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    miXHR.onreadystatechange = comprobarEstadoPeticion;
-    
-    let datos = "nombre="+nombre+"&apellidos="+apellidos+"&edad="+edad;
-    miXHR.send(datos);
+    salida+="</table>";
+
+    divResultado.innerHTML=salida;
 
 }
 
