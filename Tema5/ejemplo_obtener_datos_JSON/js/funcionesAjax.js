@@ -10,6 +10,12 @@ document.addEventListener("DOMContentLoaded",function(){
         event.preventDefault();
         realizarPeticionAsincronaPDO();
     });
+
+    let formularioBusqueda = document.getElementById("formularioBusqueda");
+    formularioBusqueda.addEventListener("submit",function(event){
+        event.preventDefault();
+        realizarPeticionAsincronaBusqueda();
+    });
 })
 
 /////////////////////////////////////////////////////////
@@ -94,6 +100,24 @@ function crearTablaJSON(respuesta){
 
 }
 
+function realizarPeticionAsincronaBusqueda(){
+    let divResultado =  document.getElementById("resultado");
+    divResultado.innerHTML = "";
 
+    let nombre = document.getElementById("nombre").value;
+    
+    document.getElementById("spinner").style ="display:block";
+    
+    miXHR = new objetoXHR();
+    /*miXHR.open("GET", "servidor/datosBusqueda.php?nombre="+nombre, true);
+    miXHR.onreadystatechange = comprobarEstadoPeticion;
+    miXHR.send(null);*/
+
+    miXHR.open("POST", "servidor/datosBusqueda.php", true);
+    let datos = "nombre="+nombre;
+    miXHR.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    miXHR.onreadystatechange = comprobarEstadoPeticion;
+    miXHR.send(datos);
+}
 
 
