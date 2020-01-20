@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+    <title>Ejemplo Ajax</title>
+    <link rel="stylesheet" href="css/css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/funcionesAjaxJquery.js" defer></script>
+</head>
+<body>
+<div id="spinner" class="spinner">
+    <div class="dot1"></div>
+    <div class="dot2"></div>
+</div>
+<div>
+    <form id="formularioMYSQL" action="">
+   
+    <input type="submit" id="botonMYSQL" value="OBTENER DATOS MYSQL" />
+    </form>
+</div>
+<div>
+    <form id="formularioPDO" action="">
+   
+    <input type="submit" id="botonPDO" value="OBTENER DATOS PDO" />
+    </form>
+</div>
+<div>
+    <h1>FORMULARIO DE BUSQUEDA</h1>
+    <form id="formularioBusqueda" action="">
+    <div>
+        <label for="nombre">Nombre</label>
+        <input type="text" value="" name="nombre" id="nombre" />
+    </div>    
+    <input type="submit" id="botonBusqueda" value="OBTENER DATOS POR BUSQUEDA" />
+    </form>
+</div>
+<div id="resultado">
+
+</div>
+
+</body>
+</html>

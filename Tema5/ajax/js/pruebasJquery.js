@@ -136,4 +136,5 @@ function tratarResultadoJSON(respuesta){
 
     document.getElementById("resultadoAsincronoJSON").innerHTML=salida;
 
+    
 }

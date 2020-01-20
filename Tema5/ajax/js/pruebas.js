@@ -44,7 +44,7 @@ function funcionAjaxAsincronaXML(){
 
 
 function tratarResultadoXML(textoXMLRespuesta){
-    datoslet  datos=textoXMLRespuesta;
+    let  datos=textoXMLRespuesta;
 
 
     // Tenemos que recorrer el fichero XML empleando los métodos del DOM
