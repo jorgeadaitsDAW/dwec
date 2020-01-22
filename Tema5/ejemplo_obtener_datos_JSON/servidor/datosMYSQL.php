@@ -3,10 +3,7 @@ sleep(2);
 header('Content-Type: application/json; charset=utf-8');
 header('Cache-Control: no-cache, must-revalidate');
 
-$servidor = "localhost";
-$usuario = "prueba";
-$password = "password";
-$baseDatos = "adaits";
+require_once "configuracion.php";
 
 // Creamos la conexion
 $conexion = new mysqli($servidor, $usuario, $password,$baseDatos);

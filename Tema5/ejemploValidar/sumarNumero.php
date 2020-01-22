@@ -1,8 +1,17 @@
 <?php
-// Si no ponemos esta línea, el resultado que devolverá sólo será texto,
-// como el ejemplo1, por lo tanto para que JQUERY lo parse automáticamente,
-// debemos indicar que la respuesta es JSON.
 header('Content-Type: application/json');
-sleep(2);
-echo json_encode($_POST["numero1"] + $_POST["numero2"]);
+require_once "validadorFormulario.php";
+$errores = validarNumeros();
+$hayErrores = false;
+foreach($errores as $campo => $erroresCampo){
+    if(count($erroresCampo)> 0){
+        $hayErrores = true;
+        break;
+    }
+}
+if(!$hayErrores){
+    echo json_encode($_POST["numero1"] + $_POST["numero2"]);
+}else{
+    echo "HAY ERRORES EN EL FORMULARIO";
+}
 ?>
