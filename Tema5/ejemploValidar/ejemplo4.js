@@ -28,7 +28,7 @@ function validarFormulario(){
     let datosPost = $("#formulario").serialize();
     realizarValidacion(datosPost,function(){
         //document.getElementById("formulario").submit();
-        sumarNumerosAxios(datosPost);
+        sumarNumeros(datosPost);
     });
 }
 
@@ -76,7 +76,7 @@ function realizarValidacion(datosPost,funcionCallback){
 
 function sumarNumeros(datosPost){
     $.ajax({
-        url:"/ejemploValidar/sumarNumero.php",
+        url:"./sumarNumero.php",
         method:'POST',
         data:datosPost,
         type:"JSON",
