@@ -22,7 +22,7 @@ function funcionAjaxAsincrona(){
     fetch("servidor/datos.php", {
         method: 'get'
     })
-    .then(gestionarErrores)
+    //.then(gestionarErrores)
     .then(function(response){ return response.text()})
         .then(escribirResultado("resultadoAsincrono"))
         .catch(function(err) {
